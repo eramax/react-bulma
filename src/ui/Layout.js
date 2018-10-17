@@ -1,7 +1,6 @@
 import React from 'react'
 import Nav from './Nav'
 import Aside from './Aside'
-import DefaultPage from '../pages/DefaultPage'
 
 export default class Layout extends React.Component {
   render() {
@@ -16,7 +15,7 @@ export default class Layout extends React.Component {
               <Aside />
             </div>
             <div className="column is-main-content">
-              <DefaultPage />
+              {this.props.children}
             </div>
           </div>
         </div>

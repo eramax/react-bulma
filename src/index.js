@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Layout from './ui/Layout'
+import ERouter from './ERouter';
+
 import './styles.sass'
 
 function App() {
-  return <Layout />
+  return <ERouter />
 }
 
 const rootElement = document.getElementById('root')

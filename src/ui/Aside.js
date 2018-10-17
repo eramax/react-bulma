@@ -1,21 +1,27 @@
-import React from 'react'
+import React from "react";
+import { NavLink  } from "react-router-dom";
 export default class Aside extends React.Component {
   state = {
     isActive: false
-  }
+  };
   isActive = () => {
-    return this.state.isActive ? 'is-active' : ''
-  }
+    return this.state.isActive ? "is-active" : "";
+  };
   render() {
     return (
       <aside className="menu">
         <p className="menu-label">General</p>
         <ul className="menu-list">
           <li>
-            <a className="is-active">Dashboard</a>
+            <NavLink  exact to="/" activeClassName="is-active">
+              Dashboard
+            </NavLink >
           </li>
           <li>
-            <a>Customers</a>
+            <NavLink  to="/about" activeClassName="is-active">About</NavLink >
+          </li>
+          <li>
+            <NavLink  to="/today" activeClassName="is-active">Today Date</NavLink >
           </li>
         </ul>
         <p className="menu-label">Administration</p>
@@ -43,6 +49,6 @@ export default class Aside extends React.Component {
           </li>
         </ul>
       </aside>
-    )
+    );
   }
 }
